@@ -1,0 +1,14 @@
+header{
+    min-height: 150px;
+   background-color: rgb(151, 155, 155);
+}
+
+footer{
+    min-height: 150px;
+    background-color: aquamarine;
+}
+
+main{
+    min-height: 500px;
+   
+}

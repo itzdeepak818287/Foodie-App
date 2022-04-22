@@ -1,0 +1,41 @@
+<h2>Enter menu Item Details</h2>
+
+<form class="form-group" (submit)="addMenuItem(item.value)" #item="ngForm">
+    <div>
+        <label for="item-code">Item Code</label><br>
+        <input type="text" name="itemCode" id="item-code" placeholder="Enter item code" class="form-control" required
+            #itemCodeVal="ngModel" ngModel [class.is-invalid]="itemCodeVal.touched && itemCodeVal.invalid">
+        <small *ngIf="itemCodeVal.touched && itemCodeVal.invalid" class="text-danger">Item Code is required</small><br>
+
+    </div>
+
+    <div>
+        <label for="item-name">Item Name</label><br>
+        <input type="text" name="itemName" id="item-name" placeholder="Enter item name" class="form-control" required
+            pattern="[a-zA-Z]{3,}" ngModel [class.is-invalid]="itemCodeVal.touched && itemCodeVal.invalid">
+        <small *ngIf="itemCodeVal.touched && itemCodeVal.invalid" class="text-danger">Item Code is required</small><br>
+
+
+    </div>
+
+    <div>
+        <label for="price">Price</label><br>
+        <input type="text" name="price" id="price" placeholder="Enter price" class="form-control" required ngModel
+            [class.is-invalid]="itemCodeVal.touched && itemCodeVal.invalid">
+        <small *ngIf="itemCodeVal.touched && itemCodeVal.invalid" class="text-danger">Item Code is required</small><br>
+
+
+    </div>
+
+    <div>
+        <label for="item-type">Item Type</label><br>
+        <input type="text" name="itemType" id="item-type" placeholder="Enter item type" class="form-control" required
+            ngModel [class.is-invalid]="itemCodeVal.touched && itemCodeVal.invalid">
+        <small *ngIf="itemCodeVal.touched && itemCodeVal.invalid" class="text-danger">Item Code is required</small><br>
+
+
+    </div>
+    <div id="addbtn">
+        <button type="submit" class="btn btn-primary" [disabled]="item.invalid">Add Item</button>
+    </div>
+</form>
