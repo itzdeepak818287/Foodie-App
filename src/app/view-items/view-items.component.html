@@ -12,8 +12,8 @@
         <tbody>
             <tr *ngFor="let item of _menuItemService.menuItems">
                 <td>{{item.itemCode}}</td>
-                <td>{{item.itemName|uppercase|shorten:10}}</td>
-                <td>{{item.price|currency:'INR'}}</td>
+                <td>{{item.itemName}}</td>
+                <td>{{item.price}}</td>
                 <td>{{item.itemType}}</td>
             </tr>
         </tbody>
